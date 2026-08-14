@@ -8,10 +8,10 @@
 </head>
 <body>
 
-  <!-- CONTENEDOR PRINCIPAL DEL COMIC -->
+  <!-- CONTENEDOR PRINCIPAL DEL CÓMIC -->
   <main class="webtoon-container">
-    
-    <!-- MUSICA DE FONDO -->
+
+    <!-- MÚSICA DE FONDO -->
     <section class="panel">
       <div class="audio-control-top">
         <img 
@@ -29,36 +29,37 @@
       <source src="img/Sleep_Music.mp3" type="audio/mpeg">
     </audio>
 
-    <!--GIF 01 -->
+    <!-- GIF 01 -->
     <section class="panel">
       <img src="img/prueba-gif-1.gif" alt="Onomatopeya de impacto" loading="lazy">
     </section>
 
-    <!-- Vineta 1: Estatica -->
+    <!-- Viñeta 1: Estática -->
     <section class="panel">
       <img src="img/KYLAR_WEBTOON_COLUMNA 1.jpg" alt="Escena inicial 1" loading="eager">
     </section>
 
-    <!--GIF 02 -->
+    <!-- GIF 02 -->
     <section class="panel">
       <img src="img/prueba-gif-2.gif" alt="Onomatopeya de impacto" loading="lazy">
     </section>
 
-    <!-- Vineta 1: Estatica -->
+    <!-- Viñeta 2: Estática -->
     <section class="panel">
-      <img src="img/KYLAR_WEBTOON_COLUMNA 2.jpg" alt="Escena inicial 1" loading="eager">
+      <img src="img/KYLAR_WEBTOON_COLUMNA 2.jpg" alt="Escena inicial 2" loading="eager">
     </section>
 
   </main>
 
   <!-- SCRIPTS DEL PROYECTO -->
   <script>
-    /* 1. SCRIPT DE MUSICA DE FONDO */
+    /* SCRIPT DE MÚSICA DE FONDO */
     const music = document.getElementById('bgMusic');
     const btn = document.getElementById('musicBtn');
 
-    const imgPlay = 'img/boton_musica.jpg';
-    const imgPause = 'img/boton_musica.jpg'; 
+    // Nombre exacto coincidiendo con la imagen del botón
+    const imgPlay = 'img/boton musica.jpg';
+    const imgPause = 'img/boton musica.jpg'; 
 
     function toggleMusic() {
       if (music.paused) {
