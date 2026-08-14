@@ -1,0 +1,70 @@
+/* Estilo Webtoon Scroll */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.webtoon-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.panel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+}
+
+.panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BOTÓN DE MÚSICA COMO VIÑETA (Se desplaza con el scroll) */
+.audio-control-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d0d; /* Mismo fondo del cómic */
+  padding:0; /* Espaciado superior e inferior opcional */
+}
+
+.custom-audio-btn {
+  width: 100%; /* Si quieres que ocupe el ancho completo como una viñeta */
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.custom-audio-btn:hover {
+  transform: scale(1.03); /* Ligero efecto al pasar el ratón */
+}
+
+.audio-control-top img {
+  cursor: pointer;
+}
+
+/* VIDEO como ventana insertada */
+.webtoon-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  background-color: #000;
+}

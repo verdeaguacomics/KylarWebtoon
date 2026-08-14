@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Webtoon Animado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CONTENEDOR PRINCIPAL DEL COMIC -->
+  <main class="webtoon-container">
+    
+    <!-- MUSICA DE FONDO -->
+    <section class="panel">
+      <div class="audio-control-top">
+        <img 
+          id="musicBtn" 
+          src="img/boton musica.jpg" 
+          alt="Reproducir música" 
+          class="custom-audio-btn"
+          onclick="toggleMusic()"
+        >
+      </div>
+    </section>
+
+    <!-- Elemento de audio -->
+    <audio id="bgMusic" loop preload="auto">
+      <source src="img/Sleep_Music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--GIF 01 -->
+    <section class="panel">
+      <img src="img/prueba-gif-1.gif" alt="Onomatopeya de impacto" loading="lazy">
+    </section>
+
+    <!-- Vineta 1: Estatica -->
+    <section class="panel">
+      <img src="img/KYLAR_WEBTOON_COLUMNA 1.jpg" alt="Escena inicial 1" loading="eager">
+    </section>
+
+    <!--GIF 02 -->
+    <section class="panel">
+      <img src="img/prueba-gif-2.gif" alt="Onomatopeya de impacto" loading="lazy">
+    </section>
+
+    <!-- Vineta 1: Estatica -->
+    <section class="panel">
+      <img src="img/KYLAR_WEBTOON_COLUMNA 2.jpg" alt="Escena inicial 1" loading="eager">
+    </section>
+
+  </main>
+
+  <!-- SCRIPTS DEL PROYECTO -->
+  <script>
+    /* 1. SCRIPT DE MUSICA DE FONDO */
+    const music = document.getElementById('bgMusic');
+    const btn = document.getElementById('musicBtn');
+
+    const imgPlay = 'img/boton_musica.jpg';
+    const imgPause = 'img/boton_musica.jpg'; 
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play().then(() => {
+          btn.src = imgPause;
+          btn.classList.add('playing');
+        }).catch(error => {
+          console.log("Error al reproducir audio:", error);
+        });
+      } else {
+        music.pause();
+        btn.src = imgPlay;
+        btn.classList.remove('playing');
+      }
+    }
+  </script>
+
+</body>
+</html>
